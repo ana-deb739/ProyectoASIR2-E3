@@ -1,0 +1,642 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../configuracion/">
+      
+      
+        <link rel="next" href="../inventario/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.3">
+    
+    
+      
+        <title>Creación de Usuarios - ProyectoASIR2-E3</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.d7758b05.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#creacion-de-usuarios-en-odoo" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="ProyectoASIR2-E3" class="md-header__button md-logo" aria-label="ProyectoASIR2-E3" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ProyectoASIR2-E3
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Creación de Usuarios
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="ProyectoASIR2-E3" class="md-nav__button md-logo" aria-label="ProyectoASIR2-E3" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    ProyectoASIR2-E3
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuracion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configuración
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Creación de Usuarios
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Creación de Usuarios
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introducción
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-creacion-de-usuarios-del-sistema-de-odoo" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Creación de Usuarios del sistema de Odoo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-creacion-de-empleados" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Creación de Empleados
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-creacion-de-clientes-2-companias-2-individuos-y-2-proveedores" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Creación de Clientes "2 compañias, 2 individuos" y 2 Proveedores
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-todos-los-contactos" class="md-nav__link">
+    <span class="md-ellipsis">
+      4 . Todos los contactos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusión
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../inventario/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inventario
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestion_venta/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gestión de una Venta
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestion_compra/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gestión de una Compra
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introducción
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-creacion-de-usuarios-del-sistema-de-odoo" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Creación de Usuarios del sistema de Odoo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-creacion-de-empleados" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Creación de Empleados
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-creacion-de-clientes-2-companias-2-individuos-y-2-proveedores" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Creación de Clientes "2 compañias, 2 individuos" y 2 Proveedores
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-todos-los-contactos" class="md-nav__link">
+    <span class="md-ellipsis">
+      4 . Todos los contactos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusión
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="creacion-de-usuarios-en-odoo">Creación de Usuarios en Odoo</h1>
+<h2 id="introduccion">Introducción</h2>
+<p>En Odoo, los usuarios son esenciales para gestionar las operaciones dentro del ERP. Algunos empleados pueden ser usuarios del sistema, mientras que otros solo estarán registrados como empleados sin acceso directo a la plataforma.</p>
+<h2 id="1-creacion-de-usuarios-del-sistema-de-odoo">1. Creación de Usuarios del sistema de Odoo</h2>
+<p>Para añadir un usuario en Odoo, sigue estos pasos:</p>
+<ol>
+<li><strong>Acceder a la Configuración de Usuarios</strong></li>
+<li>Ve a <strong>Configuración</strong> &gt; <strong>Usuarios y Empresas</strong> &gt; <strong>Usuarios</strong>.</li>
+<li>
+<p>Haz clic en el botón <strong>Crear</strong>.</p>
+</li>
+<li>
+<p><strong>Introducir los datos del usuario</strong></p>
+</li>
+<li><strong>Nombre:</strong> Nombre completo del usuario.</li>
+<li><strong>Correo Electrónico:</strong> Dirección de email con la que iniciará sesión.</li>
+<li><strong>Permisos:</strong> Selecciona el nivel de acceso según su rol dentro de la empresa.</li>
+<li>
+<p><strong>Contraseña:</strong> Se enviará un correo para que el usuario establezca su contraseña.</p>
+</li>
+<li>
+<p><strong>Asignación de Roles</strong></p>
+</li>
+<li>
+<p>Los usuarios pueden tener diferentes roles dentro del sistema, por ejemplo:</p>
+<ul>
+<li><strong>Administrador</strong>: Acceso total a la configuración y gestión.</li>
+<li><strong>Usuario de Ventas</strong>: Acceso solo a módulos de ventas.</li>
+<li><strong>Usuario de Inventario</strong>: Acceso limitado a la gestión de almacenes.</li>
+<li>
+<p>Creacion y configuracion de uno de los usuarios.
+  <img alt="alt text" src="../ODOO_rodrigo/Creacion_usuarios.PNG" /></p>
+</li>
+<li>
+<p>Te muestro todos los usuarios.
+  <img alt="alt text" src="../ODOO_rodrigo/todos_usuarios.PNG" /></p>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="2-creacion-de-empleados">2. Creación de Empleados</h2>
+<p>Además de los usuarios, también debemos registrar empleados en la empresa:</p>
+<ol>
+<li><strong>Acceder al módulo de Empleados</strong></li>
+<li>Dirígete a <strong>Aplicaciones</strong> &gt; <strong>Empleados</strong>.</li>
+<li>
+<p>Haz clic en <strong>Crear</strong>.</p>
+</li>
+<li>
+<p><strong>Rellenar la Información del Empleado</strong></p>
+</li>
+<li><strong>Nombre:</strong> Nombre completo del empleado.</li>
+<li><strong>Departamento:</strong> Asignar el departamento correspondiente (Ejemplo: Informática, Ventas, etc.).</li>
+<li><strong>Cargo:</strong> Definir su puesto de trabajo.</li>
+<li><strong>Usuario Asociado:</strong> Si el empleado tiene acceso a Odoo, asóciale una cuenta de usuario.</li>
+<li>
+<p>Creacion y configuracion de uno de los empleados.
+    <img alt="alt text" src="../ODOO_rodrigo/Creacion_empleados.PNG" /></p>
+</li>
+<li>
+<p>Te muestro todos los empleados.
+    <img alt="alt text" src="../ODOO_rodrigo/todos_empleados.PNG" /></p>
+</li>
+</ol>
+<h2 id="3-creacion-de-clientes-2-companias-2-individuos-y-2-proveedores">3. Creación de Clientes "2 compañias, 2 individuos" y  2 Proveedores</h2>
+<p>Además de los empleados, Odoo permite registrar clientes y proveedores:</p>
+<ol>
+<li><strong>Crear un Cliente</strong></li>
+<li>Ve a <strong>Contactos</strong> &gt; <strong>Clientes</strong> &gt; <strong>Crear</strong>.</li>
+<li>Introduce los datos del cliente (nombre, dirección, teléfono, email).</li>
+<li>Si el cliente pertenece a una empresa, especificar la compañía.</li>
+<li>Guardar los cambios. </li>
+<li>
+<p>Creacion y configuracion de una de las compañias.
+    <img alt="alt text" src="../ODOO_rodrigo/Creacion_Cliente_Compania.PNG" /></p>
+</li>
+<li>
+<p>Creacion y configuracion de uno de los individuos.
+    <img alt="alt text" src="../ODOO_rodrigo/Creacion_Cliente_Individuo.PNG" /></p>
+</li>
+<li>
+<p>Te muestro todos los clientes.
+    <img alt="alt text" src="../ODOO_rodrigo/todos_clientes.PNG" /></p>
+</li>
+<li>
+<p><strong>Crear un Proveedor</strong></p>
+</li>
+<li>Ve a <strong>Contactos</strong> &gt; <strong>Proveedores</strong> &gt; <strong>Crear</strong>.</li>
+<li>Introduce los datos del proveedor.</li>
+<li>Guardar los cambios.</li>
+<li>
+<p>Configuracion de uno de los proveedores. 
+    <img alt="text" src="../ODOO_rodrigo/Creacion_proveedor.PNG" /></p>
+</li>
+<li>
+<p>Te muestro todos los proveedores.
+    <img alt="alt text" src="../ODOO_rodrigo/todos_proveedores.PNG" /></p>
+</li>
+</ol>
+<h2 id="4-todos-los-contactos">4 . Todos los contactos</h2>
+<ol>
+<li><strong>Te muestro todos los contactos que he creado</strong>
+    <img alt="alt text" src="../ODOO_rodrigo/todos_usuarios.PNG" /></li>
+</ol>
+<h2 id="conclusion">Conclusión</h2>
+<p>Siguiendo estos pasos, puedes gestionar los usuarios, empleados, clientes y proveedores en Odoo, permitiendo una mejor administración del sistema ERP.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      
+    
+  </body>
+</html>
