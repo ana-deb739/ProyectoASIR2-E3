@@ -3,12 +3,11 @@ theme:
   name: "material"
 
 nav:
-  - Inicio: index.md
-  - Introducción: introduccion.md
-  - Instalación: instalacion.md
   - Configuración: configuracion.md
-  - Despliegue: despliegue.md
-  - Referencia: referencia.md
+  - Creación de Usuarios: creacion_usuarios.md
+  - Inventario: inventario.md
+  - Gestión de una Venta: gestion_venta.md
+  - Gestión de una Compra: gestion_compra.md
 on:
   push:
     branches:
